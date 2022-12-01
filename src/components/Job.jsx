@@ -17,6 +17,8 @@ const Job = ({ data }) => {
         </a>
       </Col>
       <Button
+        variant="success"
+        className="my-2"
         onClick={() =>
           dispatch({
             type: "ADD_COMPANY",
@@ -24,7 +26,7 @@ const Job = ({ data }) => {
           })
         }
       >
-        It is what it is
+        Add to Favourites!
       </Button>
     </Row>
   );

@@ -10,7 +10,9 @@ export default function Favs() {
   return (
     <Container fluid>
       <Row>
-        <h1> Favorites</h1>
+        <Col className="d-flex justify-content-center">
+          <h1 className="mt-3"> Your Favourites list!</h1>
+        </Col>
         <Col sm={12}>
           <ul style={{ listStyle: "none" }}>
             {jobs.map((job, i) => (
@@ -25,20 +27,28 @@ export default function Favs() {
                       });
                     }}
                   >
-                    Remove
+                    Delete from list
                   </Button>
                 </Col>
-                <Col>
-                  <h3>{job.data.title}</h3>
+                <Col style={{ border: "solid black" }}>
+                  <h5>{job.data.title}</h5>
                   <Row>
-                    <Col>Category: {job.data.category}</Col>
+                    <Col> Job Category: {job.data.category}</Col>
                     <Col>
-                      <Link to={`/${job.data.company_name}`}>
-                        Company Name: {`job.data.company_name`}
+                      <Link
+                        style={{ color: "red", pointer: "cursor" }}
+                        to={`/${job.data.company_name}`}
+                      >
+                        Company name: {`job.data.company_name`}
                       </Link>
                     </Col>
                     <Col>
-                      <a href={job.data.url}>Link</a>
+                      <a
+                        style={{ color: "red", pointer: "cursor" }}
+                        href={job.data.url}
+                      >
+                        Link
+                      </a>
                     </Col>
                   </Row>
                 </Col>

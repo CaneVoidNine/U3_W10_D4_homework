@@ -34,7 +34,11 @@ const MainSearch = () => {
       <Row>
         <Col xs={10} className="mx-auto my-3">
           <h1>Remote Jobs Search</h1>
-          <Link to="/favourite">Favourite</Link>
+          <Col className="d-flex justify-content-center">
+            <Link style={{ color: "red", pointer: "cursor" }} to="/favourite">
+              Your Favourite list!
+            </Link>
+          </Col>
         </Col>
         <Col xs={10} className="mx-auto">
           <Form onSubmit={handleSubmit}>
